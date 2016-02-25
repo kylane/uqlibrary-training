@@ -1,0 +1,213 @@
+[
+  {
+    "name": "Getting Started",
+    "description": "Getting Started",
+    "link": "http://www.library.uq.edu.au/training/index.phtml#Getting Started",
+    "items": [
+      {
+        "name": "Library 101",
+        "description": "Library 101",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#TAL038"
+      }
+    ]
+  },
+  {
+    "name": "Research Skills & Training",
+    "description": "Research Skills & Training",
+    "items": [
+      {
+        "name": "Advanced Research Skills at Gatton",
+        "description": "Advanced Research Skills at Gatton",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#INF85"
+      },
+      {
+        "name": "CIVL4560/4582 - 4th Yr Thesis",
+        "description": "CIVL4560/4582 - 4th Yr Thesis",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#RIS106"
+      },
+      {
+        "name": "Earth Sciences Honours Workshop",
+        "description": "Earth Sciences Honours Workshop",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#ERTH6701"
+      },
+      {
+        "name": "Finding Health Information: Using Embase Database (Health Sciences)",
+        "description": "Finding Health Information: Using Embase Database (Health Sciences)",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#INF25"
+      },
+      {
+        "name": "Finding Health Information: Using PubMed Database (Health Sciences)",
+        "description": "Finding Health Information: Using PubMed Database (Health Sciences)",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#INF14"
+      },
+      {
+        "name": "Finding Health Information: Using Scopus Database (Health Sciences)",
+        "description": "Finding Health Information: Using Scopus Database (Health Sciences)",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#INF143"
+      },
+      {
+        "name": "GPEM Information Skills (PG coursework)",
+        "description": "GPEM Information Skills (PG coursework)",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#INF142"
+      },
+      {
+        "name": "ITEE ENGG4801/4802 - Project Thesis",
+        "description": "ITEE ENGG4801/4802 - Project Thesis",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#RIS102"
+      },
+      {
+        "name": "MECH4500 and MINE4122",
+        "description": "MECH4500 and MINE4122",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#RIS127"
+      },
+      {
+        "name": "OCTY1105 database searching skills",
+        "description": "OCTY1105 database searching skills",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#RIS149"
+      },
+      {
+        "name": "ORCID setting up a profile: short workshop",
+        "description": "ORCID setting up a profile: short workshop",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#RIS146"
+      },
+      {
+        "name": "Research data management: introduction",
+        "description": "Research data management: introduction",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#RIS105"
+      },
+      {
+        "name": "Starting a systematic review? Find out where to begin (Health Science)",
+        "description": "Starting a systematic review? Find out where to begin (Health Science)",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#INF70"
+      },
+      {
+        "name": "Systematic Review Searching Skills (Health Sciences)",
+        "description": "Systematic Review Searching Skills (Health Sciences)",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#INF37"
+      }
+    ]
+  },
+  {
+    "name": "EndNote",
+    "description": "EndNote",
+    "link": "http://www.library.uq.edu.au/training/index.phtml#EndNote",
+    "items": [
+      {
+        "name": "EndNote",
+        "description": "EndNote",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#END13"
+      },
+      {
+        "name": "Endnote (GPEM PG coursework)",
+        "description": "Endnote (GPEM PG coursework)",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#END32"
+      },
+      {
+        "name": "EndNote - Herston",
+        "description": "EndNote - Herston",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#END26"
+      },
+      {
+        "name": "EndNote at Gatton",
+        "description": "EndNote at Gatton",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#END19"
+      },
+      {
+        "name": "Endnote for Psychology 4th year",
+        "description": "Endnote for Psychology 4th year",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#END18"
+      },
+      {
+        "name": "EndNote Remote",
+        "description": "EndNote Remote",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#END08"
+      },
+      {
+        "name": "Introduction to Endnote for Health",
+        "description": "Introduction to Endnote for Health",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#END33"
+      },
+      {
+        "name": "Introduction to Endnote for School of Biomedical Science",
+        "description": "Introduction to Endnote for School of Biomedical Science",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#END34"
+      }
+    ]
+  },
+  {
+    "name": "Ask I.T. General Classes",
+    "description": "Ask I.T. General Classes",
+    "link": "http://www.library.uq.edu.au/training/index.phtml#General Classes",
+    "items": [
+      {
+        "name": "Microsoft Excel: Further Functions",
+        "description": "Microsoft Excel: Further Functions",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#AskUsExl3"
+      },
+      {
+        "name": "Microsoft Excel: Introduction to Spreadsheets",
+        "description": "Microsoft Excel: Introduction to Spreadsheets",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#AskUsExl1"
+      },
+      {
+        "name": "Microsoft Excel: Manipulating Data",
+        "description": "Microsoft Excel: Manipulating Data",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#AskUsExl2"
+      },
+      {
+        "name": "Microsoft PowerPoint Workshop",
+        "description": "Microsoft PowerPoint Workshop",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#AskUsPPTWork"
+      },
+      {
+        "name": "Microsoft Word: Advanced",
+        "description": "Microsoft Word: Advanced",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#AskUsWrdAdv"
+      },
+      {
+        "name": "Microsoft Word: Productivity Tools",
+        "description": "Microsoft Word: Productivity Tools",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#AskUsWrd2"
+      },
+      {
+        "name": "Microsoft Word: Styles and Structure",
+        "description": "Microsoft Word: Styles and Structure",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#AskUsWrd1"
+      },
+      {
+        "name": "Prezi for Presentations",
+        "description": "Prezi for Presentations",
+        "link": "http://www.library.uq.edu.au/training/index.phtml#AskUsPrez"
+      }
+    ]
+  },
+  {
+    "name": "Other UQ Classes",
+    "description": "Other UQ Classes",
+    "link": "",
+    "items": [
+      {
+        "name": "UQ Graduate School Skills Training",
+        "description": "UQ Graduate School Skills Training",
+        "link": "http://www.uq.edu.au/grad-school/events-skills-training-students"
+      },
+      {
+        "name": "Student Services Learning",
+        "description": "Student Services Learning",
+        "link": "http://www.uq.edu.au/student-services/Learning"
+      }
+    ]
+  },
+  {
+    "name": "Online Training",
+    "description": "Online Training",
+    "link": "",
+    "items": [
+      {
+        "name": "Online Tutorials",
+        "description": "Online Tutorials",
+        "link": "https://www.library.uq.edu.au/help/online-tutorials"
+      }
+    ]
+  }
+]

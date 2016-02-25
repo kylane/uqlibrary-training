@@ -1,0 +1,276 @@
+<dom-module id="common-styles">
+  <template>
+    <style is="custom-style">
+      .loading {
+        moz-transition: opacity ease-in 0.2s;
+        -o-transition: opacity ease-in 0.2s;
+        -webkit-transition: opacity ease-in 0.2s;
+        -webkit-transition-delay: 0.2s;
+        transition: opacity ease-in 0.2s;
+      }
+
+      .loading[unresolved] {
+        opacity: 0;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .inverse {
+        color: var(--text-color-inverse) !important;
+      }
+
+      .error {
+        color: var(--error-color) !important;
+      }
+
+      h1 {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 2em;
+        line-height: 1.1em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: var(--header-text-color);
+      }
+
+      paper-toolbar h1 {
+        color: var(--text-color-inverse);
+      }
+
+      h2 {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 1.8em;
+        line-height: 1.1em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: var(--header-text-color);
+      }
+
+      h3 {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 1.6em;
+        line-height: 1.1em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: var(--header-text-color);
+      }
+
+      h4 {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 1.4em;
+        line-height: 1.1em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: var(--header-text-color);
+      }
+
+      h5 {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 1.2em;
+        line-height: 1.1em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: var(--header-text-color);
+      }
+
+      h6 {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 1em;
+        line-height: 1.1em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: var(--header-text-color);
+      }
+
+      .headline {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 1.5em;
+        line-height: 1.1em;
+        color: var(--text-color);
+      }
+
+      .title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 1.4em;
+        line-height: 1.1em;
+        white-space: normal;
+        color: var(--text-color);
+      }
+
+      .subhead {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 1.1em;
+        line-height: 1.1em;
+        white-space: normal;
+        color: var(--text-color);
+      }
+
+      .body2 {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 1em;
+        white-space: normal;
+        color: var(--text-color);
+      }
+
+      p, .body1 {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 1em;
+        white-space: normal;
+        color: var(--text-color);
+      }
+
+      .caption {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 0.85em;
+        white-space: normal;
+        color: var(--text-color);
+      }
+
+      a {
+        font-family: var(--font-family);
+        color: var(--accent-color);
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .button {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 1em;
+        line-height: 1.1em;
+        white-space: normal;
+        text-transform: uppercase;
+        color: var(--text-color);
+      }
+
+      .button-small {
+        font-family: var(--font-family);
+        font-weight: normal;
+        font-size: 1em;
+        white-space: normal;
+        text-transform: uppercase;
+        color: var(--text-color);
+        padding: 0.8em;
+      }
+
+      .button-colored-theme,
+      .button-colored-theme a {
+        color: var(--text-color-inverse);
+        background-color: var(--theme-color);
+      }
+
+      .button-colored-theme:hover,
+      .button-colored-theme:hover a,
+      .button-colored-theme:hover a:hover {
+        background-color: var(--theme-color-lighter);
+        text-decoration: none;
+      }
+
+      .button-theme,
+      .button-theme a {
+        color: var(--theme-color);
+      }
+
+      .button-theme:hover,
+      .button-theme:hover a,
+      .button-theme:hover a:hover {
+        background-color: var(--theme-color-light);
+        text-decoration: none;
+      }
+
+      .button-colored-accent,
+      .button-colored-accent a {
+        color: var(--text-color-inverse);
+        background-color: var(--accent-color);
+      }
+
+      .button-colored-accent:hover,
+      .button-colored-accent:hover a,
+      .button-colored-accent:hover a:hover {
+        background-color: var(--accent-color-light);
+        text-decoration: none;
+      }
+
+      .button-accent,
+      .button-accent a {
+        color: var(--accent-color);
+      }
+
+      .button-accent:hover,
+      .button-accent:hover a,
+      .button-accent:hover a:hover {
+        background-color: var(--accent-color-lighter);
+        text-decoration: none;
+      }
+
+      .button-colored-secondary,
+       .button-colored-secondary a{
+         color: var(--text-color-inverse);
+         background-color: var(--secondary-color);
+         text-decoration: none;
+       }
+
+      .button-colored-secondary:hover,
+      .button-colored-secondary:hover a,
+      .button-colored-secondary:hover a:hover {
+        background-color: var(--secondary-color-dark);
+        text-decoration: none;
+      }
+
+      .button-secondary,
+      .button-secondary a{
+        color: var(--secondary-color);
+        text-decoration: none;
+      }
+
+      .button-secondary:hover,
+      .button-secondary:hover a,
+      .button-secondary:hover a:hover {
+        background-color: var(--secondary-color-light);
+        text-decoration: none;
+      }
+
+      .button-secondary:focus,
+      .button-colored-secondary:focus,
+      .button-accent:focus,
+      .button-colored-accent:focus,
+      .button-theme:focus,
+      .button-colored-theme:focus {
+        outline: var(--focus-outline-color) auto 5px;
+        font-weight: 400;
+      }
+
+      paper-item iron-icon {
+        padding-right: 6px;
+        color: #999 !important;
+      }
+
+      paper-tab[focused] {
+        background-color: var(--menu-hover-background-color);
+      }
+
+      @media all and (max-width: 700px) {
+        .icon-button-title {
+          display: none;
+        }
+      }
+
+    </style>
+  </template>
+</dom-module>

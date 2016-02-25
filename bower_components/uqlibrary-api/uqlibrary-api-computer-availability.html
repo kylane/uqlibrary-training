@@ -1,0 +1,69 @@
+<link rel="import" href="elements.html">
+
+<!--
+Element providing computer availability.
+
+##### Example
+
+    <uqlibrary-api-computer-availability></uqlibrary-api-computer-availability>
+
+@element uqlibrary-api-computer-availability
+@blurb Element providing computer availability.
+@status alpha
+@homepage https://github.com/uqlibrary/uqlibrary-api
+-->
+<dom-module id="uqlibrary-api-computer-availability">
+  <template>
+    <uqlibrary-api id="computers" uri="/computer_availability"></uqlibrary-api>
+  </template>
+  <script>
+    (function () {
+      Polymer({
+        is: 'uqlibrary-api-computer-availability',
+        properties: {
+          baseUri: {
+            type: String,
+            value: '/computer_availability'
+          }
+        },
+        created: function () {
+        },
+        ready: function () {
+          var that = this;
+          this.$.computers.addEventListener('uqlibrary-api', function(e) {
+            that.computers = e.detail;
+
+            //library names correspond to library abbreviations
+            var names = ["Architecture &amp; Music Library", "Biological Sciences Library", "D.H. Engineering &amp; Sciences Library",
+              "Duhig Building",  "Graduate Economics &amp; Business Library", "Gatton Campus Library", "Herston Health Sciences Library",
+              "Mater Hospital Library",  "PACE Health Sciences Library", "Social Sciences &amp; Humanities Library"];
+
+            var abbrs = ["Arch Music", "Biol Sci", "DHEngSci","DuhigStudy","GradEcoBus","Gatton","Herston","Mater", "PACE", "SSAH" ];
+
+            //add abbreviations to response
+            that.computers.forEach(function(item){
+
+              var index = names.indexOf(item.library);
+              if (index >=0) {
+                item.abbr = abbrs[index];
+              } else {
+                item.abbr = item.library.replace(/[a-z];/g, '');
+              }
+            });
+
+            that.fire('uqlibrary-api-computer-availability-loaded', that.computers);
+          });
+        },
+        /**
+         * Gets the computer availability.
+         *
+         * @method get
+         */
+        get: function () {
+          this.set('$.computers.uri', this.baseUri);
+          this.$.computers.get();
+        }
+      });
+    }());
+  </script>
+</dom-module>

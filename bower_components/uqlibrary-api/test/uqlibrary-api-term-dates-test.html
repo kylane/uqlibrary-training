@@ -1,0 +1,100 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>api term dates testing</title>
+
+  <script src="../../webcomponentsjs/webcomponents.min.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <script src="../../test-fixture/test-fixture-mocha.js"></script>
+  <link rel="import" href="../../test-fixture/test-fixture.html">
+
+  <link rel="import" href="../uqlibrary-api-applications.html">
+
+</head>
+<body>
+
+<test-fixture id="basic">
+  <template>
+    <uqlibrary-api-term-dates id="app"></uqlibrary-api-term-dates>
+  </template>
+</test-fixture>
+
+<script>
+  var app;
+
+  var term =   {
+    "code": "6505",
+    "begin": "2015-01-01",
+    "end": "2015-03-31",
+    "cut_off": "2015-02-01"
+  };
+
+  suite('uqlibrary-api-term-dates tests', function() {
+
+    setup(function () {
+      app = fixture('basic');
+    });
+
+    test('date is in boundaries of a term', function (done) {
+
+      var date = new Date("2015-01-02");
+      var isTermDate = app.isTermDate(term, date);
+      assert.equal(true, isTermDate);
+
+      date = new Date("2014-12-24");
+      isTermDate = app.isTermDate(term, date);
+      assert.equal(true, isTermDate);
+
+      date = new Date("2015-03-31");
+      isTermDate = app.isTermDate(term, date);
+      assert.equal(true, isTermDate);
+
+      date = new Date("2015-04-07");
+      isTermDate = app.isTermDate(term, date);
+      assert.equal(true, isTermDate);
+
+      done();
+
+    });
+
+    test('date is not in boundaries of a term', function (done) {
+
+      var date = new Date("2014-12-01");
+      var isTermDate = app.isTermDate(term, date);
+      assert.equal(false, isTermDate);
+
+      date = new Date("2015-04-08");
+      isTermDate = app.isTermDate(term, date);
+      assert.equal(false, isTermDate);
+
+      done();
+
+    });
+
+    test('semester data is extracted from code', function (done) {
+
+      var termData = app.getYearSemesterByCode(term.code);
+
+      assert.equal(2015, termData.year);
+      assert.equal(1, termData.semester);
+
+      done();
+
+    });
+  });
+
+  </script>
+
+</body>
+</html>

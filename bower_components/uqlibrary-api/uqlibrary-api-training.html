@@ -1,0 +1,70 @@
+<link rel="import" href="elements.html">
+
+<!--
+Element providing library training links
+
+##### Example
+
+    <uqlibrary-api-training></uqlibrary-api-training>
+
+@element uqlibrary-api-training
+@blurb Element providing training links
+@status alpha
+@homepage https://github.com/uqlibrary/uqlibrary-api
+-->
+<dom-module id="uqlibrary-api-training">
+    <template>
+        <uqlibrary-api id="list"></uqlibrary-api>
+    </template>
+    <script>
+        (function () {
+            Polymer({
+                is: 'uqlibrary-api-training',
+                properties: {
+                    baseUri: {
+                        type: String,
+                        value: '/training'
+                    }
+                },
+                /**
+                 * Fired when the object has loaded.
+                 *
+                 * @event uqlibrary-api-training
+                 */
+                created: function () {
+                },
+                ready: function () {
+                    var that = this;
+                    this.$.list.addEventListener('uqlibrary-api', function (e) {
+                        that.list = e.detail;
+                        that.fire('uqlibrary-api-training', that.list);
+                    });
+                },
+                /**
+                 * Gets training links
+                 *
+                 * @method get
+                 */
+                get: function (args) {
+                    // Temporary
+                    var that = this;
+
+                    var xobj = new XMLHttpRequest();
+                    var fileName = this.resolveUrl('mock/training_get.json');
+                    xobj.open('GET', fileName, true);
+                    xobj.onreadystatechange = function () {
+                        if (xobj.readyState == 4 && xobj.status == "200") {
+                            var response = xobj.responseText;
+                            that.fire('uqlibrary-api-training', JSON.parse(response));
+                        }
+                    };
+                    xobj.send(null);
+
+                    // Use when live API is done
+                    //this.set('$.list.uri', this.baseUri + '/current');
+                    //this.$.list.get();
+                }
+            });
+        }());
+    </script>
+</dom-module>

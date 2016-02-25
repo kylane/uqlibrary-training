@@ -1,0 +1,221 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>api applications testing</title>
+
+  <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <script src="../bower_components/web-component-tester/browser.js"></script>
+  <script src="../bower_components/test-fixture/test-fixture-mocha.js"></script>
+  <link rel="import" href="../bower_components/test-fixture/test-fixture.html">
+
+  <link rel="import" href="../uqlibrary-api-applications.html">
+
+</head>
+<body>
+
+<test-fixture id="basic">
+  <template>
+    <uqlibrary-api-applications id="app"></uqlibrary-api-applications>
+  </template>
+</test-fixture>
+
+<script>
+  var app;
+  var url = '../data/applications.json';
+  var ptypes = [1, 31, 11, 21, 2, 22, 3, 32, 17, 18, 25, 14, 4, 9, 13, 10, 12, 27, 7, 15, 5, 8];
+  var ptypeApps = [
+    {
+      ptype: [1, 31, 11, 21], //undergrads, coursework postgrads
+      apps: [
+        'uqlibrary-chat', 'uqlibrary-booking', 'uqlibrary-borrowing',
+        'uqlibrary-computers', 'uqlibrary-hours', 'uqlibrary-courses',
+        'uqlibrary-feedback', 'uqlibrary-papercut']
+    },
+    {
+      ptype: [22], //postgrad research with courses
+      apps: [
+        'uqlibrary-chat', 'uqlibrary-booking', 'uqlibrary-borrowing', 'uqlibrary-computers',
+        'uqlibrary-hours', 'uqlibrary-feedback', 'uqlibrary-papercut', 'uqlibrary-courses', 'uqlibrary-research'],
+      classes: [
+        {
+          "ACAD_CAREER": "PGRS",
+          "DESCR": "Doctoral Colloquium A",
+          "SUBJECT": "RELN",
+          "CATALOG_NBR": "9000",
+          "CAMPUS": "STLUC",
+          "INSTRUCTION_MODE": "IT",
+          "ACAD_GROUP": "HSS",
+          "STRM": "6480"
+        },
+        {
+          "ACAD_CAREER": "PGRS",
+          "DESCR": "Research Studies (Part-time)",
+          "SUBJECT": "RSCH",
+          "CATALOG_NBR": "9001",
+          "CAMPUS": "STLUC",
+          "INSTRUCTION_MODE": "IN",
+          "ACAD_GROUP": "GRAD",
+          "STRM": "6505"
+        },
+        {
+          "ACAD_CAREER": "PGRS",
+          "DESCR": "Research Studies (Part-time)",
+          "SUBJECT": "RSCH",
+          "CATALOG_NBR": "9001",
+          "CAMPUS": "STLUC",
+          "INSTRUCTION_MODE": "IN",
+          "ACAD_GROUP": "GRAD",
+          "STRM": "6525"
+        }],
+      date: new Date("2015-01-01") //set up "current date" to a date between summer and first semestre, research & real subject
+    },
+    {
+      ptype: [2], //postgrad research without courses
+      apps: [
+        'uqlibrary-chat', 'uqlibrary-booking', 'uqlibrary-borrowing', 'uqlibrary-computers',
+        'uqlibrary-hours', 'uqlibrary-feedback', 'uqlibrary-papercut', 'uqlibrary-research'],
+      classes: [
+        {
+          "ACAD_CAREER": "PGRS",
+          "DESCR": "Doctoral Colloquium A",
+          "SUBJECT": "RELN",
+          "CATALOG_NBR": "9000",
+          "CAMPUS": "STLUC",
+          "INSTRUCTION_MODE": "IT",
+          "ACAD_GROUP": "HSS",
+          "STRM": "6480"
+        },
+        {
+          "ACAD_CAREER": "PGRS",
+          "DESCR": "Research Studies (Part-time)",
+          "SUBJECT": "RSCH",
+          "CATALOG_NBR": "9001",
+          "CAMPUS": "STLUC",
+          "INSTRUCTION_MODE": "IN",
+          "ACAD_GROUP": "GRAD",
+          "STRM": "6505"
+        },
+        {
+          "ACAD_CAREER": "PGRS",
+          "DESCR": "Research Studies (Part-time)",
+          "SUBJECT": "RSCH",
+          "CATALOG_NBR": "9001",
+          "CAMPUS": "STLUC",
+          "INSTRUCTION_MODE": "IN",
+          "ACAD_GROUP": "GRAD",
+          "STRM": "6525"
+        }],
+      date: new Date("2015-03-01") //set up "current date" to somewhere in first semestre - only research subjects
+    },
+
+    {
+      ptype: [17],  //library staff with masquerade access
+      apps: [
+        'uqlibrary-chat', 'uqlibrary-booking', 'uqlibrary-borrowing', 'uqlibrary-papercut', 'uqlibrary-courses',
+        'uqlibrary-computers', 'uqlibrary-hours', 'uqlibrary-feedback', 'uqlibrary-masquerade', 'uqlibrary-research'],
+      canMasquerade: true
+    },
+    {
+      ptype: [18],  //library staff without masquerade access
+      apps: [
+        'uqlibrary-chat', 'uqlibrary-booking', 'uqlibrary-borrowing', 'uqlibrary-papercut', 'uqlibrary-courses',
+        'uqlibrary-computers', 'uqlibrary-hours', 'uqlibrary-feedback', 'uqlibrary-research']
+    },
+    {
+      ptype: [14, 4],  //alumni
+      apps: [
+        'uqlibrary-chat', 'uqlibrary-borrowing', 'uqlibrary-computers',
+        'uqlibrary-hours', 'uqlibrary-feedback', 'uqlibrary-papercut']
+    },
+    {
+      ptype: [15],  //uq staff
+      apps: [
+        'uqlibrary-chat', 'uqlibrary-borrowing', 'uqlibrary-computers',
+        'uqlibrary-hours', 'uqlibrary-feedback']
+    }
+  ];
+
+  ptypeApps.forEach(function (item, index, array) {
+    item.ptype.forEach(function (ptype, indexP, arrayP) {
+
+      suite('uqlibrary-api tests', function () {
+
+        var app;
+
+        setup(function () {
+          app = fixture('basic');
+        });
+
+        test('check permissions for ptype ' + ptype, function (done) {
+
+          console.log(app);
+
+          app.url = url;
+          app.user = {
+            type: ptype,
+            canMasquerade: item.canMasquerade,
+            classes: item.classes
+          };
+
+          console.log(app.url);
+          console.log(app.user);
+
+          if (item.date)
+            app.checkDate = item.date;
+
+          var appsLoaded = function (e) {
+            var apps = e.detail.filter(function (item) {
+              return !item.isDivider && item.app;
+            });
+
+            //check number of apps is correct
+            assert.equal(apps.length, item.apps.length);
+
+            //construct a string with sorted apps names for easy compare from api data
+            apps = apps.map(function (item) {
+              return item.app;
+            }).sort().join();
+
+            //construct a string with sorted apps names for easy compare from test data
+            var definedApps = item.apps.sort().join();
+
+            if (apps !== definedApps) {
+              console.log("API: " + apps);
+              console.log("TST: " + definedApps);
+            }
+
+            assert.equal(apps, definedApps);
+
+            done();
+          };
+
+          setTimeout(function () {
+
+            app.addEventListener('uqlibrary-api-applications-loaded', appsLoaded);
+            app.get();
+
+          }, 100);
+
+        });
+
+      });
+
+    });
+  });
+
+</script>
+
+</body>
+</html>
+

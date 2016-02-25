@@ -1,0 +1,146 @@
+[
+  {
+    "library": "Architecture &amp; Music Library",
+    "buildingNumber": 51,
+    "availability": {
+      "Level 3": {
+        "Available": 34,
+        "Occupied": 9
+      }
+    }
+  },
+  {
+    "library": "Biological Sciences Library",
+    "buildingNumber": 94,
+    "availability": {
+      "Level 1": {
+        "Available": 13,
+        "Occupied": 16
+      },
+      "Level 2": {
+        "Available": 59,
+        "Occupied": 25
+      },
+      "Level 3": {
+        "Available": 24,
+        "Occupied": 11
+      },
+      "Level 4": {
+        "Available": 25,
+        "Occupied": 20
+      }
+    }
+  },
+  {
+    "library": "D.H. Engineering &amp; Sciences Library",
+    "buildingNumber": 50,
+    "availability": {
+      "Level 1": {
+        "Available": 19,
+        "Occupied": 0
+      },
+      "Level 2": {
+        "Available": 54,
+        "Occupied": 6
+      },
+      "Level 3": {
+        "Available": 24,
+        "Occupied": 5
+      },
+      "Level 4": {
+        "Available": 1,
+        "Occupied": 1
+      }
+    }
+  },
+  {
+    "library": "Duhig Building",
+    "buildingNumber": 2,
+    "availability": {
+      "Level 1": {
+        "Available": 2,
+        "Occupied": 0
+      },
+      "Level 2": {
+        "Available": 72,
+        "Occupied": 32
+      }
+    }
+  },
+  {
+    "library": "Graduate Economics &amp; Business Library",
+    "buildingNumber": 39,
+    "availability": {
+      "Level 2": {
+        "Available": 35,
+        "Occupied": 0
+      }
+    }
+  },
+  {
+    "library": "Gatton Campus Library",
+    "buildingNumber": 8102,
+    "availability": {
+      "Level 1": {
+        "Available": 60,
+        "Occupied": 7
+      },
+      "Level 2": {
+        "Available": 17,
+        "Occupied": 1
+      }
+    }
+  },
+  {
+    "library": "Herston Health Sciences Library",
+    "buildingNumber": null,
+    "availability": {
+      "Level 6": {
+        "Available": 35,
+        "Occupied": 8
+      }
+    }
+  },
+  {
+    "library": "Mater Hospital Library",
+    "buildingNumber": null,
+    "availability": {
+      "Level 1": {
+        "Available": 23,
+        "Occupied": 3
+      }
+    }
+  },
+  {
+    "library": "PACE Health Sciences Library",
+    "buildingNumber": null,
+    "availability": {
+      "Level 6": {
+        "Available": 48,
+        "Occupied": 6
+      }
+    }
+  },
+  {
+    "library": "Social Sciences &amp; Humanities Library",
+    "buildingNumber": 12,
+    "availability": {
+      "Level 1 Entry": {
+        "Available": 32,
+        "Occupied": 23
+      },
+      "Level 2": {
+        "Available": 20,
+        "Occupied": 4
+      },
+      "Level 3": {
+        "Available": 17,
+        "Occupied": 4
+      },
+      "Level 4": {
+        "Available": 14,
+        "Occupied": 1
+      }
+    }
+  }
+]
